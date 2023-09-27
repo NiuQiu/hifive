@@ -40,7 +40,7 @@ public class Reader {
                     }
                     customer = new Customer(bagNumber, name, category, item);
                 } else {
-                    String option = record[3].replaceAll("\\[option\\]", "");
+                    String option = record[3].replaceAll("\\[option\\]", "").trim();
                     if(customer != null) {
                         customer.getOptions().add(option);
                     } else {
@@ -69,7 +69,7 @@ public class Reader {
             System.out.println("Category: " + entry.getKey());
             List<Customer> val = entry.getValue();
             for(int i=0; i<val.size(); i++) {
-                System.out.printf("Index: %d, Options: %s\n", i + 1, val.get(i).getOptions());
+                System.out.printf("Index: %d, Options: %s\n", i + 1, val.get(i).getOptions().toString());
             }
             System.out.println();
         }
