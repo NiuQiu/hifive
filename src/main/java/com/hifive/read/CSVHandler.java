@@ -30,10 +30,9 @@ public class CSVHandler {
                     String name = record[1];
                     String category = record[2];
                     String meal = record[3];
-                    if(customer != null) {
-                        customers.add(customer);
-                    }
+
                     customer = new Customer(bagNumber, name, category, meal);
+                    customers.add(customer);
                 } else {
                     String option = record[3].replaceAll("\\[option\\]", "").trim();
                     if(customer != null) {
@@ -43,7 +42,6 @@ public class CSVHandler {
                     }
                 }
             }
-
         }
         return customers;
     }
