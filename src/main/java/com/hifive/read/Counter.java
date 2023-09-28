@@ -7,9 +7,7 @@ import com.hifive.item.meal.*;
 import com.hifive.pojo.Customer;
 import com.hifive.pojo.Order;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.hifive.item.Sandwich.*;
 import static com.hifive.item.meal.BBQBaconRanchSandwich.SANDWICH;
