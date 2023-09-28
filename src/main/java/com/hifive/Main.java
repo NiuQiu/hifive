@@ -1,7 +1,8 @@
 package com.hifive;
 
 import com.hifive.pojo.Customer;
-import com.hifive.read.Reader;
+import com.hifive.read.CSVHandler;
+import com.hifive.read.Counter;
 import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.File;
@@ -19,11 +20,12 @@ public class Main {
             throw new IllegalStateException("CSV file is invalid");
         }
 
-        Reader reader = new Reader();
+        CSVHandler CSVHandler = new CSVHandler();
+        Counter counter = new Counter();
         try {
-            reader.read(input);
-            Map<String, List<Customer>> res = reader.count();
-            reader.print(res);
+            List<Customer> customers = CSVHandler.read(input);
+            counter.count(customers);
+            counter.print();
         } catch (CsvValidationException | IOException e) {
             throw new RuntimeException(e);
         }

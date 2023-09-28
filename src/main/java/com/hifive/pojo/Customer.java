@@ -1,32 +1,37 @@
 package com.hifive.pojo;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.hifive.item.meal.*;
 
 public class Customer {
     private final int bagNumber;
     private final String name;
     private final String category;
-    private final String item;
-    private final List<String> options;
+    private final Order order;
 
-    public Customer(int bagNumber, String name, String category, String item) {
+    public Customer(int bagNumber, String name, String category, String meal) {
         this.bagNumber = bagNumber;
         this.name = name;
         this.category = category;
-        this.item = item;
-        this.options = new ArrayList<>();
+        this.order = getMealByType(meal);
     }
 
-    public List<String> getOptions() {
-        return options;
+    private Order getMealByType(String meal) {
+        return switch (meal) {
+            case "Chicken Tender Wrap" -> new Order(new ChickenTenderWrap(meal));
+            case "2 Pieces Chicken" -> new Order(new TwoPiecesChicken(meal));
+            case "3 Pieces Chicken" -> new Order(new ThreePiecesChicken(meal));
+            case "The Power Plant Burger" -> new Order(new ThePowerPlantBurger(meal));
+            case "Crispy Chicken Tenders" -> new Order(new CrispyChickenTender(meal));
+            case "Classic Sandwich" -> new Order(new ClassicSandwich(meal));
+            case "Homestyle Fried Chicken Sandwich" -> new Order(new HomeStyleSandwich(meal));
+            case "BBQ Bacon Ranch Sandwich" -> new Order(new BBQBaconRanchSandwich(meal));
+            case "Spicy Roast Chicken Sandwich" -> new Order(new SpicyRoastChickenSandwich(meal));
+            default -> throw new IllegalStateException("Unknown meal type");
+        };
+
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public String getItem() {
-        return item;
+    public Order getOrder() {
+        return order;
     }
 }
