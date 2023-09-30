@@ -12,6 +12,7 @@ public enum Option {
     BISCUIT("side"),
     COOKIE_WHITE("side"),
     COOKIE_BLACK("side"),
+    BUTTERY_CORN("side"),
     // Sauce
     SIGNATURE("sauce"),
     ALARM_S("sauce"),
@@ -19,6 +20,7 @@ public enum Option {
     RANCH("sauce"),
     BBQ("sauce"),
     SWEET_CHILI("sauce"),
+    CHIPOTLE("sauce"),
     HONEY_MUSTARD("sauce");
 
     private final String category;

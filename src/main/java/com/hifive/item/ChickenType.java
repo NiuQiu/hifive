@@ -14,5 +14,5 @@ public enum ChickenType {
     BREAST,
     FRIED_THIGH_BS_SPICY,
     ROAST_THIGH_BS_SPICY,
-    PATTY;
+    ROASTED_SANDWICH_BS_SPICY;
 }

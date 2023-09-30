@@ -4,7 +4,7 @@ import com.hifive.item.ChickenType;
 
 import java.util.Map;
 
-import static com.hifive.item.ChickenType.PATTY;
+import static com.hifive.item.ChickenType.ROASTED_SANDWICH_BS_SPICY;
 import static com.hifive.item.meal.BBQBaconRanchSandwich.SANDWICH;
 
 public class ThePowerPlantBurger implements Meal{
@@ -27,8 +27,8 @@ public class ThePowerPlantBurger implements Meal{
 
     @Override
     public void count(Map<ChickenType, Integer> chickens) {
-        int cur = chickens.getOrDefault(PATTY, 0);
-        chickens.put(PATTY, cur + numOfPatties);
+        int cur = chickens.getOrDefault(ROASTED_SANDWICH_BS_SPICY, 0);
+        chickens.put(ROASTED_SANDWICH_BS_SPICY, cur + numOfPatties);
     }
 
     @Override

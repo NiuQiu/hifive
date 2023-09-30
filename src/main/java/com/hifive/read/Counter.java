@@ -47,25 +47,25 @@ public class Counter {
     public void print() {
         System.out.println("Chicken:");
         for(Map.Entry<ChickenType, Integer> e : chickenMap.entrySet()) {
-            System.out.printf("Item: %-22s, Total: %d\n", e.getKey().name(), e.getValue());
+            System.out.printf("Item: %-28s, Total: %d\n", e.getKey().name(), e.getValue());
         }
         System.out.println();
 
         System.out.println("Sandwich:");
         for(Map.Entry<Sandwich, Integer> e : sandwichMap.entrySet()) {
-            System.out.printf("Item: %-22s, Total: %d\n", e.getKey().name(), e.getValue());
+            System.out.printf("Item: %-28s, Total: %d\n", e.getKey().name(), e.getValue());
         }
         System.out.println();
 
         System.out.println("Side:");
         for(Map.Entry<Option, Integer> e : sideMap.entrySet()) {
-            System.out.printf("Item: %-22s, Total: %d\n", e.getKey().name(), e.getValue());
+            System.out.printf("Item: %-28s, Total: %d\n", e.getKey().name(), e.getValue());
         }
         System.out.println();
 
         System.out.println("Sauce:");
         for(Map.Entry<Option, Integer> e : sauceMap.entrySet()) {
-            System.out.printf("Item: %-22s, Total: %d\n", e.getKey().name(), e.getValue());
+            System.out.printf("Item: %-28s, Total: %d\n", e.getKey().name(), e.getValue());
         }
     }
 

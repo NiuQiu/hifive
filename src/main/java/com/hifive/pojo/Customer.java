@@ -22,10 +22,10 @@ public class Customer {
             case "3 Pieces Chicken" -> new Order(new ThreePiecesChicken(meal));
             case "The Power Plant Burger" -> new Order(new ThePowerPlantBurger(meal));
             case "Crispy Chicken Tenders" -> new Order(new CrispyChickenTender(meal));
-            case "Classic Sandwich" -> new Order(new ClassicSandwich(meal));
+            case "Hi Five Classic Sandwich" -> new Order(new ClassicSandwich(meal));
             case "Homestyle Fried Chicken Sandwich" -> new Order(new HomeStyleSandwich(meal));
             case "BBQ Bacon Ranch Sandwich" -> new Order(new BBQBaconRanchSandwich(meal));
-            case "Spicy Roast Chicken Sandwich" -> new Order(new SpicyRoastChickenSandwich(meal));
+            case "Spicy Roasted Chicken Sandwich" -> new Order(new SpicyRoastChickenSandwich(meal));
             default -> throw new IllegalStateException("Unknown meal type");
         };
 

@@ -65,6 +65,10 @@ public class CSVHandler {
             case "Regular" -> order.setSpicy(false);
             case "Fried" -> order.setFried(true);
             case "Roasted" -> order.setFried(false);
+            case "Buttery corn" -> order.update(BUTTERY_CORN);
+            case "Chipotle" -> order.update(CHIPOTLE);
+            case "Ranch" -> order.update(RANCH);
+            case "BBQ" -> order.update(BBQ);
             default -> throw new IllegalStateException("No such option");
         }
     }
