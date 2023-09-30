@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <java.source.version>17</java.source.version>
+        <java.target.version>17</java.target.version>
     </properties>
 
     <dependencies>
@@ -33,8 +33,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>${java.source.version}</source>
+                    <target>${java.target.version}</target>
                 </configuration>
             </plugin>
         </plugins>
